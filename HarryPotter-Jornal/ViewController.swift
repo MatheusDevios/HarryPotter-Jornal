@@ -59,12 +59,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if let imageAnchor = anchor as? ARImageAnchor {
             
+            //create the videoNode with the video
             let videoNode = SKVideoNode(fileNamed: "harrypotter.mp4")
             
             videoNode.play()
             
+            //create a scene to display the video with SKScene
             let videoScene = SKScene(size: CGSize(width: 480, height: 360))
-            
             
             videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
             
